@@ -1,6 +1,41 @@
 <script>
-	for(var i=1;i<=5;i++){
-		document.write("Lan lap thu "+i +":");
-		document.write(i +"<br>");	
+	function kiemTraSoLe(so){
+		if(so%2==1){
+			return true;
+		}else{
+			return false;
+		}
 	}
+	function giaiPt1(a,b){
+		if(a==0){
+			if(b==0){
+				return "pt vo so nghiem";
+			}else{
+				return "pt trinh vo nghiem";
+			}
+		}else{
+			return "pt co nghiem la"+ (-b/a);
+		}
+	}
+	function xuongDong(){
+		document.write("<br>");
+		document.write("<br>");
+	}
+	var arr= [4,2,5,6,1,6,5];
+	var dem=0;
+	for(var i =0;i<arr.length;i++){
+		if(kiemTraSoLe(arr[i])==true){
+			dem++;
+		}
+	}
+	document.write(dem);
+	xuongDong();
+	document.write("abc");
+	xuongDong();
+	
+	var kq = giaiPt1(0,0);
+	document.write(kq);
+	
+	var kq = giaiPt1(1,2);
+	document.write(kq);
 </script>
